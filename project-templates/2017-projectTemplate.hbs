@@ -1,0 +1,36 @@
+{{!--
+    This is the default layout, or base template which contains all the boring bits of HTML that have to appear on every page. Read more about it in https://themes.ghost.org/docs/templates
+--}}
+<!DOCTYPE html>
+<html lang="{{lang}}">
+    <head>
+    {{!-- Document settings --}}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{!-- Base meta tags --}}
+    <title>{{meta_title}}</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    {{!-- Styles --}}
+    <link href="{{asset "css/webfonts.css"}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset "css/old-style.css"}}" rel="stylesheet" type="text/css" />
+
+    {{!-- This tag outputs SEO meta+structured data and other important settings from Ghost. Do not remove it. --}}
+    {{ghost_head}}
+    </head>
+
+    <body class="case-studies">
+      <div class="banner-2017"><p>Say hello to <a target="_blank" href="/spaceghost-0-0-1/">Spaceghost MK 0.0.1</a></p></div>
+  <div class="page-wrapper">
+  {{> 2017/heading}}
+        <div class="case-study">
+
+            {{!-- All the main content gets inserted here, index.hbs, post.hbs, etcetera. --}}
+            <main class="main">
+                {{{body}}}
+            </main>
+        </div>
+    </body>
+</html>
